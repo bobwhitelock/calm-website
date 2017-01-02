@@ -13,74 +13,40 @@ layout: default
 </div>
 
 <div class="wrapper">
-<ul class="post-list">
-  {% for post in paginator.posts %}
-  <li>
-    <h2>
-      <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-    </h2>
-    <section class="post-excerpt" itemprop="description">
-      <p>{{ post.content | strip_html | truncatewords: 50 }}</p>
-    </section>
-    <section class="post-meta">
-      <div class="post-date">{{ post.date | date: "%B %-d, %Y" }}</div>
-      <div class="post-categories">
-      {% if post.categories.size > 0 %}in {% for cat in post.categories %}
-        {% if site.jekyll-archives %}
-        <a href="{{ site.baseurl }}/category/{{ cat }}">{{ cat | capitalize }}</a>{% if forloop.last == false %}, {% endif %}
-        {% else %}
-        <a href="{{ site.baseurl }}/posts/#{{ cat }}">{{ cat | capitalize }}</a>{% if forloop.last == false %}, {% endif %}
-        {% endif %}
-      {% endfor %}{% endif %}
-      </div>
-    </section>
-  </li>
-  {% if forloop.last == false %}
-  <hr>
-  {% endif %}
-  {% endfor %}
-</ul>
 
-<nav class="pagination" role="navigation">
-	<p>
-    {% if paginator.previous_page %}
-			{% if paginator.page == 2 %}
-			<a class="newer-posts" href="{% if site.baseurl %}{{ site.baseurl }}{% endif %}/">
-        <span class="fa-stack fa-lg">
-          <i class="fa fa-square fa-stack-2x"></i>
-          <i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
-        </span>
-      </a>
-			{% else %}
-			<a class="newer-posts" href="{{ site.baseurl }}/page{{paginator.previous_page}}">
-				<span class="fa-stack fa-lg">
-					<i class="fa fa-square fa-stack-2x"></i>
-					<i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
-				</span>
-			</a>
-			{% endif %}
-		{% else %}
-		<span class="fa-stack fa-lg">
-      <i class="fa fa-square fa-stack-2x"></i>
-      <i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
-    </span>
-		{% endif %}
-		<span class="page-number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
-		{% if paginator.next_page %}
-		<a class="newer-posts" href="{{ site.baseurl }}/page{{paginator.next_page}}">
-      <span class="fa-stack fa-lg">
-        <i class="fa fa-square fa-stack-2x"></i>
-        <i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
-      </span>
-    </a>
-		{% else %}
-		<span class="fa-stack fa-lg">
-      <i class="fa fa-square fa-stack-2x"></i>
-      <i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
-    </span>
-		{% endif %}
-	</p>
-</nav>
+  <p>
+    Welcome to CALM, the Swindon Children's Cancer And Leukaemia Movement.
+  </p>
+  <p>
+    CALM is a registered charity, run by parents who have all experienced what it
+    is like to have a child diagnosed with cancer.
+  </p>
+  <p>
+  </p>
+
+  <p>
+    CALM helps families that have a child receiving treatment at the Great
+    Western Hospital in Swindon, Wiltshire.
+  </p>
+
+  <p>
+    Most of the families CALM supports are based in the Swindon and Marlborough
+    area.
+  </p>
+
+  <p>
+    CALM is a purely voluntary charity with no paid employees.
+  </p>
+
+  <p>
+    We aim to keep all expenses as low as possible, so we can ensure money
+    donated can help the families who need it.
+  </p>
+
+  <p>
+    CALM receives no funding from the NHS. All funds are raised by our
+    families, with support from the local community.
+  </p>
 
 </div>
 </div>
