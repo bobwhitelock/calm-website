@@ -1,3 +1,11 @@
+
+# Standard Jekyll stuff.
 _site
 .sass-cache
 .jekyll-metadata
+
+# Config file with API keys etc.
+config.sh
+
+# Data imported from Contentful.
+_data/contentful

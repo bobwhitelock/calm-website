@@ -12,10 +12,9 @@
     </a>
     <nav role="navigation">
       <ul id="js-navigation-menu" class="navigation-menu show">
-        {% for page in site.pages %}
-          {% if page.title and page.main_nav != false %}
+        {% assign pages = site.data.contentful.spaces.calm.page | sort: 'order' %}
+        {% for page in pages %}
           <li class="nav-link"><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-          {% endif %}
         {% endfor %}
       </ul>
     </nav>

@@ -65,3 +65,22 @@ protocols:
     os_repo: "https://github.com/bencentra/centrarium.com"
     os_rcs_type: "git"
     os_src: "git@github.com:bencentra/centrarium.com.git"
+
+# See github.com/contentful/jekyll-contentful-data-import.
+contentful:
+  spaces:
+    - calm:
+        space: ENV_CONTENTFUL_SPACE_ID
+        access_token: ENV_CONTENTFUL_ACCESS_TOKEN
+        # TODO remove/adapt unneeded from below
+        cda_query:                  # Optional
+          include: 2
+          limit: 100
+        all_entries: true           # Optional - Defaults to false, only grabbing the amount set on CDA Query
+        all_entries_page_size: 1000 # Optional - Defaults to 1000, maximum amount of entries per CDA Request for all_entries
+        # content_types:              # Optional
+        #   cat: MyCoolMapper
+        # client_options:             # Optional
+        #   api_url: 'preview.contentful.com' # Defaults to 'api.contentful.com' which is Production
+        # base_path: app_path         # Optional - Defaults to Current directory
+        # destination: destination_in_data # Optional - Defaults to _data/contentful/spaces
