@@ -78,7 +78,7 @@ pre code.hljs {
 
   &.has-cover {
     color: $white;
-    text-shadow: 0 2px 1px rgba(0, 0, 0, 0.67) !important;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.67) !important;
     background-position: 50% 50%;
     background-size: cover;
 
@@ -95,7 +95,7 @@ pre code.hljs {
     padding: 3em 1em;
 
     &.has-cover {
-      background-color: rgba(0, 0, 0, 0.2);
+      background-color: rgba(0, 0, 0, 0.3);
       padding: 6em 1em !important;
 
       @include media($tablet) {
@@ -139,7 +139,7 @@ pre code.hljs {
 
   .logo {
     float: left;
-    height: 4em;
+    height: 6em;
 
     @include media($tablet) {
       padding-left: $em-base;
@@ -147,8 +147,8 @@ pre code.hljs {
 
 
     img {
-      max-height: 2.5em;
-      margin-top: 0.75em;
+      margin-top: .50em;
+      max-height: 5em;
       padding-right: 1em;
     }
 
@@ -159,11 +159,12 @@ pre code.hljs {
 
   nav {
     float: none;
+    font-size: 110%;
     padding: 1.25em 0;
 
     @include media($tablet) {
       float: right;
-      line-height: 1.5em;
+      line-height: 3em;
     }
   }
 
@@ -276,8 +277,8 @@ pre code.hljs {
 
   .site-header-container {
     color: $white;
-    text-shadow: 0 2px 1px rgba(0, 0, 0, 0.33);
-    background-color: $highlight-color;
+    text-shadow: 1px 1px 4px $dark-gray;
+    background-color: $calm-green-more-faded;
 
     .site-header {
       .title {
@@ -286,7 +287,7 @@ pre code.hljs {
 
       .subtitle {
         font-style: italic;
-        font-size: modular-scale(1);
+        font-size: modular-scale(2);
       }
     }
   }

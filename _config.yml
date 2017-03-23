@@ -3,7 +3,7 @@ exclude:
   - "/vendor/"
 
 # Site settings
-title: Children's Cancer and Leukaemia Movement
+title: "CALM: Children's Cancer and Leukaemia Movement"
 subtitle: "Swindon's Local Children's Cancer Charity"
 email: info@calmcharity.org
 name: C.A.L.M. Trust
@@ -15,7 +15,7 @@ description: >
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://calmcharity.org/" # the base hostname & protocol for your site
 cover: "/assets/header_image.jpg"
-logo: "/assets/logo.png"
+logo: "/assets/calm_turtle.png"
 
 # Build settings
 markdown: kramdown
