@@ -96,10 +96,10 @@ pre code.hljs {
 
     &.has-cover {
       background-color: rgba(0, 0, 0, 0.3);
-      padding: 6em 1em !important;
+      padding: 10em 1em !important;
 
       @include media($tablet) {
-        padding: 9em 1em !important;
+        padding: 15em 1em !important;
       }
     }
   }
