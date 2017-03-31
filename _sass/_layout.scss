@@ -525,8 +525,19 @@ pre code.hljs {
   }
 }
 
-.facebook {
-  width: 500px;
+.social-media {
+  width: 1050px;
+  overflow: hidden;
   margin-left: auto;
   margin-right: auto;
+
+  .facebook {
+    float: left;
+    width: 500px;
+  }
+
+  .twitter {
+    float: right;
+    width: 500px;
+  }
 }
