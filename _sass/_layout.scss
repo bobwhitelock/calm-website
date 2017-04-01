@@ -446,10 +446,8 @@ pre code.hljs {
 
   .footer-heading {}
 
-  /*
-  *	Site Navigation (left)
-  */
-  .site-navigation {
+  // TODO: These footer sections are very similar, could de-duplicate.
+  .footer-contact-info {
     @include span-columns(12);
     @include media($mobile) {
       @include span-columns(6);
@@ -468,10 +466,7 @@ pre code.hljs {
     }
   }
 
-  /*
-  *	Contact Info (center)
-  */
-  .site-contact {
+  .footer-donation-info {
     margin-top: 1em;
 
     @include span-columns(12);
@@ -502,27 +497,24 @@ pre code.hljs {
     }
   }
 
-  /*
-  *	Site Description/Signature (right)
-  */
-  .site-signature {
-    margin-top: 1em;
+  // .footer-other-section {
+  //   margin-top: 1em;
 
-    @include span-columns(12);
-    @include media($tablet) {
-      @include span-columns(4);
+  //   @include span-columns(12);
+  //   @include media($tablet) {
+  //     @include span-columns(4);
 
-      margin-right: 0;
-      margin-top: 0;
-    }
+  //     margin-right: 0;
+  //     margin-top: 0;
+  //   }
 
 
-    font-size: 0.9em;
+  //   font-size: 0.9em;
 
-    a {
-      text-decoration: underline;
-    }
-  }
+  //   a {
+  //     text-decoration: underline;
+  //   }
+  // }
 }
 
 .social-media {
