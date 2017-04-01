@@ -287,7 +287,7 @@ pre code.hljs {
 
       .subtitle {
         font-style: italic;
-        font-size: modular-scale(2);
+        font-size: modular-scale(3);
       }
     }
   }
@@ -295,7 +295,6 @@ pre code.hljs {
   img {
     display: block;
     margin: auto;
-    width: 90%;
   }
 
   /*
@@ -530,4 +529,10 @@ pre code.hljs {
       @include span-columns(6);
     }
   }
+}
+
+address {
+  // Use this element for address paragraph on contact page; this spacing is
+  // consistent with that of paragraphs.
+  margin: 0 0 $small-spacing;
 }
