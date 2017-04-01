@@ -14,5 +14,38 @@ layout: default
     {{ page.text | markdownify }}
   </article>
 
+  {% comment %} Special case for contact page form {% endcomment %}
+  {% if page.url == '/contact/' %}
+    <fieldset>
+      <form
+        name="contact" netlify netlify-honeypot="hidden-bot-field">
+
+        <p class="hidden">
+          <label>
+            Hidden field
+            <input type="text" name="hidden-bot-field"></input>
+          </label>
+        </p>
+
+        <label>
+          Name
+          <input name="name" type="text" required></input>
+        </label>
+
+        <label>
+          Email
+          <input name="email" type="email" required></input>
+        </label>
+
+        <label>
+          Message
+          <textarea name="message" required></textarea>
+        </label>
+
+        <button type="submit">Contact CALM</button>
+      </form>
+    </fieldset>
+  {% endif %}
+
 </div>
 </div>
