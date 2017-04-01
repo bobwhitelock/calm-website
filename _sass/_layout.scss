@@ -526,18 +526,16 @@ pre code.hljs {
 }
 
 .social-media {
-  width: 1050px;
-  overflow: hidden;
   margin-left: auto;
   margin-right: auto;
 
-  .facebook {
-    float: left;
-    width: 500px;
-  }
+  @include outer-container;
 
-  .twitter {
-    float: right;
-    width: 500px;
+  .social-media-widget {
+    @include span-columns(12);
+
+    @include media($tablet) {
+      @include span-columns(6);
+    }
   }
 }
