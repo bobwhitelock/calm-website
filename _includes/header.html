@@ -12,6 +12,7 @@
     </a>
     <nav role="navigation">
       <ul id="js-navigation-menu" class="navigation-menu show">
+        <li class="nav-link"><a href="{{ site.baseurl }}">Home</a>
         {% assign pages = site.data.contentful.spaces.calm.page | sort: 'order' %}
         {% for page in pages %}
           <li class="nav-link"><a href="{{ page.url }}">{{ page.title }}</a>
