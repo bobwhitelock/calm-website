@@ -109,9 +109,11 @@ pre code.hljs {
 *	Header
 */
 .navigation {
-  box-shadow: 0 2px $highlight-color;
-  padding: 0 1em;
-  margin: 0;
+  background-color: $calm-green;
+
+  $shadow-height: 16px;
+  box-shadow: 0 ($shadow-height / 2) $calm-green-faded, 0 $shadow-height $calm-green-more-faded;
+  margin-bottom: $shadow-height;
 
   /*
   *	Navigation Menu - http://refills.bourbon.io/unstyled/ (see "Navigation")
@@ -208,6 +210,7 @@ pre code.hljs {
   li.nav-link {
     a {
       display: inline-block;
+      color: $white;
 
       @include media($tablet) {
         padding-right: 1.5em;
