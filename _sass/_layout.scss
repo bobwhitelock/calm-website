@@ -131,7 +131,9 @@ pre code.hljs {
 
   // Nav menu
   .navigation-wrapper {
-    @include outer-container;
+    // Container max-width set by trial and error; may need to expand if more
+    // header links added.
+    @include outer-container(58em);
     @include clearfix;
 
     position: relative;
