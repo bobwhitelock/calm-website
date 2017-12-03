@@ -505,6 +505,23 @@ pre code.hljs {
     }
   }
 
+  .footer-logo {
+    $wrapper-size: 120px;
+
+    display: inline-block;
+    border-radius: 100%;
+    background-color: $white;
+    text-align: center;
+    height: $wrapper-size;
+    width: $wrapper-size;
+    line-height: $wrapper-size;
+
+    img {
+      // Combined with setting the line-height above, this vertically centers
+      // the image.
+      vertical-align: middle;
+    }
+  }
 }
 
 .social-media {
