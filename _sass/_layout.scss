@@ -115,6 +115,10 @@ pre code.hljs {
   box-shadow: 0 ($shadow-height / 2) $calm-green-faded, 0 $shadow-height $calm-green-more-faded;
   margin-bottom: $shadow-height;
 
+  $nav-side-padding: 1rem;
+  padding-left: $nav-side-padding;
+  padding-right: $nav-side-padding;
+
   /*
   *	Navigation Menu - http://refills.bourbon.io/unstyled/ (see "Navigation")
   */
@@ -125,6 +129,7 @@ pre code.hljs {
     margin: 0;
     font-size: 1.5em;
     padding-top: 0.5em;
+    color: $white;
 
     @include media($tablet) {
       display: none;
