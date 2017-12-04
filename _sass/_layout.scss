@@ -538,6 +538,33 @@ pre code.hljs {
   }
 }
 
+.home .wrapper {
+  p {
+    font-size: modular-scale(1);
+    position: relative;
+
+    &:not(:first-of-type) {
+      $bullet-margin: 2rem;
+      margin-left: $bullet-margin;
+
+      &:before {
+        // Use font-awesome icon as bullet (see
+        // https://stackoverflow.com/a/14736642/2620402); this is
+        // `chevron-right`.
+        content: "\f054";
+        font-family: FontAwesome;
+        left: -$bullet-margin;
+        position: absolute;
+        top: 0;
+      }
+    }
+
+    &:first-of-type {
+      font-size: modular-scale(3);
+    }
+  }
+}
+
 .social-media {
   margin-left: auto;
   margin-right: auto;
