@@ -428,9 +428,10 @@ pre code.hljs {
 *	Footer
 */
 .site-footer {
+  $footer-padding: 1em;
   $link-color: $white;
 
-  padding: 1em 1em 2em 1em;
+  padding: $footer-padding $footer-padding ($footer-padding * 2) $footer-padding;
   background-color: $highlight-color;
   color: $white;
 
@@ -477,7 +478,7 @@ pre code.hljs {
   .footer-donate-section {
     @include footer-section;
 
-    margin-top: 1em;
+    margin-top: $footer-padding;
 
     @include media($mobile) {
       @include span-columns(6);
@@ -500,7 +501,7 @@ pre code.hljs {
   .footer-info-section {
     @include footer-section;
 
-    margin-top: 1em;
+    margin-top: $footer-padding;
 
     @include media($tablet) {
       @include span-columns(5);
@@ -510,16 +511,24 @@ pre code.hljs {
     }
   }
 
+  .footer-heading {
+    margin-bottom: $footer-padding / 2;
+
+    * {
+      display: inline-block;
+    }
+  }
+
   .footer-logo {
     $wrapper-size: 120px;
 
-    display: inline-block;
     border-radius: 100%;
     background-color: $white;
     text-align: center;
     height: $wrapper-size;
     width: $wrapper-size;
     line-height: $wrapper-size;
+    margin-right: $footer-padding;
 
     img {
       // Combined with setting the line-height above, this vertically centers
