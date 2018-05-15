@@ -66,7 +66,7 @@ DEPENDENCIES
   jekyll-contentful-data-import
 
 RUBY VERSION
-   ruby 2.4.0p0
+   ruby 2.4.3p205
 
 BUNDLED WITH
-   1.14.6
+   1.16.1
