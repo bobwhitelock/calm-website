@@ -1,0 +1,6 @@
+#!/bin/bash
+set -euo pipefail
+IFS=$'\n\t'
+
+xdg-open 'http://localhost:4000' &
+jekyll serve

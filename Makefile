@@ -1,7 +1,7 @@
 
 .PHONY: start
 start:
-	jekyll serve
+	bin/start
 
 .PHONY: setup
 setup:
