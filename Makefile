@@ -5,7 +5,7 @@ start:
 
 .PHONY: setup
 setup:
-	gem install bundler && bundle install && make contentful
+	bin/setup
 
 .PHONY: contentful
 contentful:

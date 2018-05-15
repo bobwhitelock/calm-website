@@ -1,0 +1,23 @@
+#!/bin/bash
+set -euo pipefail
+IFS=$'\n\t'
+
+main() {
+  local config_file
+
+  # shellcheck disable=SC2002
+  cat .ruby-version | xargs rbenv install --skip-existing
+
+  gem install bundler
+  bundle install
+
+  config_file=config.sh
+  if [ ! -f "$config_file" ]; then
+    cp config.sh.example "$config_file"
+    echo "Need to set variables in ${config_file} to continue" >&2
+    exit 1
+  fi
+  make contentful
+}
+
+main
