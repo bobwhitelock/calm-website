@@ -9,6 +9,7 @@ GEM
       multi_json (~> 1)
     domain_name (0.5.20170223)
       unf (>= 0.0.5, < 1.0.0)
+    fastimage (2.1.4)
     ffi (1.9.14)
     forwardable-extended (2.6.0)
     http (2.2.1)
@@ -31,6 +32,9 @@ GEM
       pathutil (~> 0.9)
       rouge (~> 1.7)
       safe_yaml (~> 1.0)
+    jekyll-cloudinary (1.12.1)
+      fastimage (>= 2.0, < 3.0)
+      jekyll (>= 3.0, < 4.0)
     jekyll-contentful-data-import (1.4.3)
       contentful (~> 1.0)
       jekyll (>= 2.5.0, < 4)
@@ -63,6 +67,7 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll (= 3.3.1)
+  jekyll-cloudinary
   jekyll-contentful-data-import
 
 RUBY VERSION
