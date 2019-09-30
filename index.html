@@ -1,11 +1,19 @@
 ---
 layout: default
 ---
+
+{% comment %}
+`homePage` is a collection, as all data from Contentful comes in a collection,
+but just want the first (and should always be the only) item in this
+collection.
+{% endcomment %}
+{% assign homePage = site.data.contentful.spaces.calm.homePage.first %}
+
 <div class="home">
 
 <div
   class="site-header-container has-cover"
-  style="background-image: url({{ site.cover | prepend: site.baseurl }});"
+  style="background-image: url(https:{{ homePage.coverImage.url }});"
 >
   <div class="scrim has-cover">
     <header class="site-header">
@@ -17,38 +25,7 @@ layout: default
 
 <div class="wrapper">
 
-  <p>
-    Welcome to CALM, the Swindon Children's Cancer And Leukaemia Movement.
-  </p>
-
-  <p>
-    CALM is a registered charity, run by parents who have all experienced what it
-    is like to have a child diagnosed with cancer.
-  </p>
-
-  <p>
-    CALM helps families that have a child receiving treatment at the Great
-    Western Hospital in Swindon, Wiltshire.
-  </p>
-
-  <p>
-    Most of the families CALM supports are based in the Swindon and Marlborough
-    area.
-  </p>
-
-  <p>
-    CALM is a purely voluntary charity with no paid employees.
-  </p>
-
-  <p>
-    We aim to keep all expenses as low as possible, so we can ensure money
-    donated can help the families who need it.
-  </p>
-
-  <p>
-    CALM receives no funding from the NHS. All funds are raised by our
-    families, with support from the local community.
-  </p>
+  {{ homePage.text | markdownify }}
 
 </div>
 
