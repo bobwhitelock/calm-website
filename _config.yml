@@ -86,7 +86,7 @@ contentful:
         # base_path: app_path         # Optional - Defaults to Current directory
         # destination: destination_in_data # Optional - Defaults to _data/contentful/spaces
 
-# See github.com/avillafiorita/jekyll-datapage_gen.
+# See http://github.com/avillafiorita/jekyll-datapage_gen.
 page_gen:
   - data: 'contentful.spaces.calm.page'
     name: 'url'
