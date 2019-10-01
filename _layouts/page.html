@@ -11,6 +11,9 @@ layout: default
   {% include page_divider.html %}
 
   <article class="post-content">
+    {% assign image = page.image %}
+    <p><img src="https:{{ image.url }}" alt="{{ image.title }}" /></p>
+
     {{ page.text | markdownify }}
   </article>
 
