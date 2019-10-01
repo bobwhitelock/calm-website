@@ -1,6 +1,10 @@
 
 exclude:
-  - "/vendor/"
+  - Gemfile*
+  - Makefile
+  - README.md
+  - bin/
+  - config.sh*
 
 # Site settings
 title: "CALM: Children's Cancer and Leukaemia Movement"
