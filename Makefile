@@ -13,4 +13,4 @@ contentful:
 
 .PHONY: demo
 demo:
-	jekyll build && cd _site && python2 -m SimpleHTTPServer 8000
+	bin/demo

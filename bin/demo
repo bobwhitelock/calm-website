@@ -1,0 +1,23 @@
+#!/bin/bash
+set -euo pipefail
+IFS=$'\n\t'
+
+
+main() {
+  local port ip visit_string visit_string_length dashes_string
+
+  port=8000
+  ip="$(ip -4 addr | grep inet | tail -n1 | xargs | cut -d' ' -f2 | cut -d/ -f1)"
+
+  visit_string="Visit: $ip:$port"
+  visit_string_length="$(echo "$visit_string" | wc --chars)"
+  dashes_string="$(python -c "print('-' * $visit_string_length)")"
+
+  printf "\n%s\n%s\n\n" "$visit_string" "$dashes_string"
+
+  jekyll build
+
+  (cd _site && python2 -m SimpleHTTPServer 8000)
+}
+
+main "$@"
