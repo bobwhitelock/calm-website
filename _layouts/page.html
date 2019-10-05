@@ -12,7 +12,12 @@ layout: default
 
   <article class="post-content">
     {% assign image = page.image %}
-    <p><img src="https:{{ image.url }}" alt="{{ image.title }}" /></p>
+    <p>
+      <img
+        src="{{ site.cloudinary_fetch_url }}/https:{{ image.url }}"
+        alt="{{ image.title }}"
+      />
+    </p>
 
     {{ page.text | markdownify }}
   </article>
