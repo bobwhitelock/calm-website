@@ -27,7 +27,7 @@ cloudinary_fetch_url: 'https://res.cloudinary.com/diy3lykgh/image/fetch'
 markdown: kramdown
 
 # Google analytics
-# ga_tracking_id: "UA-XXXX-1"
+ga_tracking_id: 'UA-149448149-1'
 
 # Social icons and sharing options
 #
