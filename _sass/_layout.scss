@@ -73,34 +73,45 @@ pre code.hljs {
 }
 
 .site-header-container, .post-header-container {
-  width: 100%;
   text-align: center;
+  color: $white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.67) !important;
+  background-color: $calm-green-more-faded;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
 
-  &.has-cover {
-    color: $white;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.67) !important;
-    background-position: 50% 50%;
-    background-size: cover;
+  $title-padding: 5px;
 
-    .title {
+  .title {
+    padding-left: $title-padding;
+    padding-right: $title-padding;
+    font-size: modular-scale(1);
+
+    @include media($tablet) {
       font-size: modular-scale(6);
     }
+  }
 
-    .subtitle, .info {
-      font-size: modular-scale(1);
+  .subtitle {
+    padding-left: $title-padding;
+    padding-right: $title-padding;
+    padding-bottom: $title-padding;
+    font-style: italic;
+    font-size: modular-scale(1);
+
+    @include media($tablet) {
+      font-size: modular-scale(3);
     }
   }
 
   .scrim {
-    padding: 3em 1em;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding-top: 20vh;
 
-    &.has-cover {
-      background-color: rgba(0, 0, 0, 0.3);
-      padding: 10em 1em !important;
-
-      @include media($tablet) {
-        padding: 15em 1em !important;
-      }
+    @include media($desktop) {
+      height: 100vh;
+      padding-top: 60vh;
     }
   }
 }
@@ -282,23 +293,6 @@ pre code.hljs {
 
     a.newer-posts {
       text-decoration: none;
-    }
-  }
-
-  .site-header-container {
-    color: $white;
-    text-shadow: 1px 1px 4px $dark-gray;
-    background-color: $calm-green-more-faded;
-
-    .site-header {
-      .title {
-        font-size: modular-scale(6);
-      }
-
-      .subtitle {
-        font-style: italic;
-        font-size: modular-scale(3);
-      }
     }
   }
 
