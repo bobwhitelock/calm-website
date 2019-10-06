@@ -21,7 +21,10 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://calmcharity.org/" # the base hostname & protocol for your site
 logo: "/assets/calm_logo_words_white.png"
 
-cloudinary_fetch_url: 'https://res.cloudinary.com/diy3lykgh/image/fetch'
+# `q_auto` means automatic quality and `f_auto` means automatic format, meaning
+# Cloudinary will attempt to select the optimum quality and format to serve
+# each image for the current browser, device, image type etc.
+cloudinary_fetch_url: 'https://res.cloudinary.com/diy3lykgh/image/fetch/q_auto,f_auto'
 
 # Build settings
 markdown: kramdown
